@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 40px auto;
+  background: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* --- Form (newPost.html) --- */
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.radio-group label {
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 16px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #2f7bd6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #245fa8;
+}
+
+/* --- Post list (postList.html) --- */
+
+.post {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.post h2 {
+  margin: 0 0 8px 0;
+}
+
+.post .meta {
+  color: #777;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  color: white;
+}
+
+.badge.public {
+  background: #2f9e44;
+}
+
+.badge.private {
+  background: #868e96;
+}
+
+.new-post-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: #2f7bd6;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.new-post-link:hover {
+  background: #245fa8;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+}

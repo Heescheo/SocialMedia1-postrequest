@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>All Posts</title>
+<link rel="stylesheet" th:href="@{/style.css}" href="style.css">
+</head>
+<body>
+
+<h1>All Posts</h1>
+
+<a class="new-post-link" th:href="@{/posts/new}">+ New Post</a>
+
+<div th:if="${#lists.isEmpty(posts)}" class="empty">
+  <p>No posts yet.</p>
+</div>
+
+<div class="post" th:each="post : ${posts}">
+  <h2 th:text="${post.title}">Post title</h2>
+  <div class="meta">
+    <span th:text="${post.date}">2026-01-01</span>
+    &mdash;
+    <span th:if="${post.public}" class="badge public">Public</span>
+    <span th:unless="${post.public}" class="badge private">Private</span>
+  </div>
+  <p th:text="${post.content}">Post content goes here.</p>
+</div>
+
+</body>
+</html>
